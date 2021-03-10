@@ -59,35 +59,55 @@ function Posts() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-6">
+          <Col size="md-12">
             <Jumbotron>
-              <h1>What Posts Should I Read?</h1>
+              <h1>What would you like to sell?</h1>
             </Jumbotron>
             <form>
               <Input
                 onChange={handleInputChange}
                 name="title"
-                placeholder="Title (required)"
+                placeholder="Title of Item (required)"
               />
               <Input
                 onChange={handleInputChange}
-                name="author"
-                placeholder="Author (required)"
+                name="seller"
+                placeholder="Seller's phone# (required)"
               />
-              <TextArea
+              <Input
                 onChange={handleInputChange}
-                name="synopsis"
-                placeholder="Synopsis (Optional)"
+                name="State"
+                placeholder="State"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="City"
+                placeholder="City"
+              />
+               <Input
+                onChange={handleInputChange}
+                name="Password"
+                placeholder="Password to delete post"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="Price"
+                placeholder="Name Your Price"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="State"
+                placeholder="State"
               />
               <FormBtn
                 disabled={!(formObject.author && formObject.title)}
                 onClick={handleFormSubmit}
               >
-                Submit Book
+                Submit Post
               </FormBtn>
             </form>
           </Col>
-          <Col size="md-6 sm-12">
+          {/* <Col size="md-6 sm-12">
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
@@ -107,7 +127,7 @@ function Posts() {
             ) : (
               <h3>No Results to Display</h3>
             )}
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     );
