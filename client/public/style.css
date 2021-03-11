@@ -1,0 +1,64 @@
+nav {
+    padding: 10px
+}
+
+nav .brand-logo{
+    font-family: 'Ubuntu', sans-serif;
+    color: #0CF574;
+}
+
+#logo{
+    color: #587291;
+    font-size: 75px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h4{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.btn-large {
+    margin: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #1CCAD8;
+}
+
+.queen-blue-bg{
+    background-color: #587291;
+}
+
+.queen-blue-tx{
+    color: #587291;
+}
+
+.blue-green-bg{
+    background-color: #2F97C1;
+}
+
+.blue-green-tx{
+    color: #2F97C1;
+}
+
+.dark-turquoise-bg{
+    background-color: #1CCAD8;
+}
+
+.dark-turquoise-tx{
+    color: #1CCAD8;
+}
+
+.turquoise-bg{
+    background-color: #15E6CD;
+}
+
+.turquoise-tx{
+    color: #15E6CD;
+}
+
+.spring-green-bg{
+    background-color: #0CF574;
+}
+
+.spring-green-tx{
+    color: #0CF574;
+}
