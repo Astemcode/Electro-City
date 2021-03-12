@@ -62,15 +62,15 @@ function SearchResults() {
     <Row>
       <Col size="sm-12">
         <Jumbotron>
-          <h1>This are the items that we have for you!</h1>
+          <h1>These are the items that we have for you!</h1>
         </Jumbotron>
-        {/* {posts.length ? ( 
+        {posts.length ? ( 
           <List>
             {posts.map((post) => ( 
               <ListItem key={post._id}>
                 <Link to={"/posts/" + post._id}>
                   <strong>
-                    {post.title} For sale by: {post.author}
+                    {post.name} For sale by: {post.seller}
                   </strong>
                 </Link>
                 <DeleteBtn onClick={() => deletePost(posts._id)} />
@@ -79,7 +79,7 @@ function SearchResults() {
           </List>
         ) : (
           <h3>No Results to Display</h3>
-        )} */}
+        )}
       </Col>
     </Row>
   );
