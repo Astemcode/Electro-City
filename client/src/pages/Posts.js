@@ -9,7 +9,7 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Posts() {
   // Setting our component's initial state
-  const [Posts, setPosts] = useState([])
+  const [posts, setPosts] = useState([])
   const [formObject, setFormObject] = useState({})
 
   // Load all books and store them with setBooks
@@ -29,7 +29,7 @@ function Posts() {
   // Deletes a book from the database with a given id, then reloads books from the db
   function deletePost(id) {
     API.deletePost(id)
-      .then(res => loadPost())
+      .then(res => loadPosts())
       .catch(err => console.log(err));
   }
 
@@ -59,11 +59,10 @@ function Posts() {
     return (
       <Container fluid>
         <Row>
-          <Col size="md-12">
-            <Jumbotron>
+          <Jumbotron>
               <h1>What would you like to sell?</h1>
             </Jumbotron>
-            <form>
+            <form className="input-format">
               <Input
                 onChange={handleInputChange}
                 name="title"
@@ -106,32 +105,10 @@ function Posts() {
                 Submit Post
               </FormBtn>
             </form>
-          </Col>
-          {/* <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {books.length ? (
-              <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
-                      <strong>
-                        {book.title} by {book.author}
-                      </strong>
-                    </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
-                  </ListItem>
-                ))}
-              </List>
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Col> */}
-        </Row>
+          </Row>
       </Container>
     );
   }
 
 
-export default Books;
+export default Posts;

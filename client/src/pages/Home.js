@@ -14,8 +14,8 @@ function Home() {
                     </div>
                     <div className="row center">
                         <div className="col s12">
-                            <button className="waves-effect waves-light btn-large">Search</button>
-                            <button className="waves-effect waves-light btn-large">Post Item</button>
+                            <a href="/search" className="waves-effect waves-light btn-large">Search</a>
+                            <a href="/addToPosts" className="waves-effect waves-light btn-large">Post Item</a>
                         </div>
                     </div>
                 </form>

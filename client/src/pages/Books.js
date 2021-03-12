@@ -9,15 +9,15 @@ import { Input, TextArea, FormBtn } from "../components/Form";
 
 function Books() {
   // Setting our component's initial state
-  const [books, setBooks] = useState([])
+  const [Books, setBooks] = useState([])
   const [formObject, setFormObject] = useState({})
 
-  // Load all books and store them with setBooks
+  // Load all Books and store them with setBooks
   useEffect(() => {
     loadBooks()
   }, [])
 
-  // Loads all books and sets them to books
+  // Loads all Books and sets them to Books
   function loadBooks() {
     API.getBooks()
       .then(res => 
@@ -26,7 +26,7 @@ function Books() {
       .catch(err => console.log(err));
   };
 
-  // Deletes a book from the database with a given id, then reloads books from the db
+  // Deletes a Book from the database with a given id, then reloads Books from the db
   function deleteBook(id) {
     API.deleteBook(id)
       .then(res => loadBooks())
@@ -39,8 +39,8 @@ function Books() {
     setFormObject({...formObject, [name]: value})
   };
 
-  // When the form is submitted, use the API.saveBook method to save the book data
-  // Then reload books from the database
+  // When the form is submitted, use the API.saveBook method to save the Book data
+  // Then reload Books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
     if (formObject.title && formObject.author) {
@@ -89,16 +89,16 @@ function Books() {
             <Jumbotron>
               <h1>Books On My List</h1>
             </Jumbotron>
-            {books.length ? (
+            {Books.length ? (
               <List>
-                {books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {Books.map(Book => (
+                  <ListItem key={Book._id}>
+                    <Link to={"/Books/" + Book._id}>
                       <strong>
-                        {book.title} by {book.author}
+                        {Book.title} by {Book.author}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => deleteBook(book._id)} />
+                    <DeleteBtn onClick={() => deleteBook(Book._id)} />
                   </ListItem>
                 ))}
               </List>

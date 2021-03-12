@@ -5,6 +5,10 @@ import Detail from "./pages/Detail";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
+import Posts from "./pages/Posts";
+import SearchResults from "./pages/SearchResults";
+
+
 
 // changed the switch rout from books to search posts
 {/* <Route exact path={["/", "/books"]}>
@@ -21,10 +25,13 @@ function App() {
             <Home />
           </Route>
           <Route exact path="/search">
-            <Books />
+            <SearchResults />
           </Route>
           <Route exact path="/results/:id">
             <Detail />
+          </Route>
+          <Route exact path="/addToPosts">
+            <Posts />
           </Route>
           <Route>
             <NoMatch />
