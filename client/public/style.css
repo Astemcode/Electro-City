@@ -7,6 +7,10 @@ nav .brand-logo{
     color: #0CF574;
 }
 
+ .input-format{
+     width: 50vw;
+     margin: 0 auto;
+ }
 #logo{
     color: #587291;
     font-size: 75px;
