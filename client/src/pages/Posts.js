@@ -43,13 +43,16 @@ function Posts() {
   // Then reload books from the database
   function handleFormSubmit(event) {
     event.preventDefault();
-    if (formObject.title && formObject.author) {
+    if (formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price ) {
       API.savePost({
 
         //Put the criteria to save here (create posts)
-        /* title: formObject.title,
-        author: formObject.author,
-        synopsis: formObject.synopsis */
+        name: formObject.name,
+         seller: formObject.seller,
+         state: formObject.state,
+         city: formObject.city,
+         password: formObject.password,
+         price: formObject.price
       })
         .then(res => loadPosts())
         .catch(err => console.log(err));
@@ -65,8 +68,8 @@ function Posts() {
             <form className="input-format">
               <Input
                 onChange={handleInputChange}
-                name="title"
-                placeholder="Title of Item (required)"
+                name="name"
+                placeholder="What would you like to sell? (required)"
               />
               <Input
                 onChange={handleInputChange}
@@ -75,31 +78,27 @@ function Posts() {
               />
               <Input
                 onChange={handleInputChange}
-                name="State"
+                name="state"
                 placeholder="State"
               />
               <Input
                 onChange={handleInputChange}
-                name="City"
+                name="city"
                 placeholder="City"
               />
                <Input
                 onChange={handleInputChange}
-                name="Password"
+                name="password"
                 placeholder="Password to delete post"
               />
               <Input
                 onChange={handleInputChange}
-                name="Price"
+                name="price"
                 placeholder="Name Your Price"
               />
-              <Input
-                onChange={handleInputChange}
-                name="State"
-                placeholder="State"
-              />
+              
               <FormBtn
-                disabled={!(formObject.author && formObject.title)}
+                disabled={!(formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price  )}
                 onClick={handleFormSubmit}
               >
                 Submit Post
