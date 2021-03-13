@@ -1,6 +1,3 @@
-
-
-
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
@@ -9,6 +6,8 @@ import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
+import { FilterForm } from "../components/FilterForm";
+
 
 function SearchResults() {
   // Setting our component's initial state
@@ -64,6 +63,7 @@ function SearchResults() {
         <Jumbotron>
           <h1>These are the items that we have for you!</h1>
         </Jumbotron>
+        <FilterForm />
         {posts.length ? ( 
           <List>
             {posts.map((post) => ( 
