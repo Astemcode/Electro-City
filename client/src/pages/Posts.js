@@ -103,6 +103,8 @@ function Posts() {
               >
                 Submit Post
               </FormBtn>
+
+              
             </form>
           </Row>
       </Container>
