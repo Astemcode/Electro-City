@@ -68,8 +68,7 @@ h4{
 }
 
 body {
-    background-image: url("/map2.png");
+    background-image: linear-gradient(to bottom right, rgb(135, 123, 238), rgb(224, 224, 89));
     background-position: center;
     background-blend-mode: screen;
-    /* background-color: #1CCAD8; */
 }
