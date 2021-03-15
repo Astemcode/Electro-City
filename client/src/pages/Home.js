@@ -9,6 +9,7 @@ function Home() {
                 <form className="container">
                     <div className="row">
                         <div className="col s12">
+                            
                             <input type='text' name="search-term" />
                         </div>
                     </div>
