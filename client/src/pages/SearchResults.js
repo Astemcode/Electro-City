@@ -7,9 +7,17 @@ import { Col, Row, Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import { Input, TextArea, FormBtn } from "../components/Form";
 import { FilterForm } from "../components/FilterForm";
+import Modal from "../components/Modal";
 
 
 function SearchResults() {
+  const [open, setOpen] = React.useState(false);
+  function getList() {
+    API.getPosts().then(data => {
+      console.log(data);
+      setOpen(true);
+    })
+  }
   // Setting our component's initial state
   const [posts, setPosts] = useState([])
   const [formObject, setFormObject] = useState({})
@@ -73,6 +81,10 @@ function SearchResults() {
                     {post.name} For sale by: {post.seller}
                   </strong>
                 </Link>
+                <button type="button" onClick={()=> getList()}>
+                  open modal
+                </button>
+                <Modal setOpen={setOpen} open={open}/>
                 <DeleteBtn onClick={() => deletePost(posts._id)} />
               </ListItem>
             ))}
