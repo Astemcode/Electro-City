@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
+import Books from "./Books";
 
 function Detail(props) {
   const [post, setPost] = useState({})
@@ -18,33 +19,20 @@ function Detail(props) {
 
   return (
       <Container fluid>
-        <Row>
-          <Col size="md-12">
-            <Jumbotron>
-              <h1>
-                {post.name} by {post.seller}
-              </h1>
-            </Jumbotron>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-10 md-offset-1">
-            <article>
-              <h1>Details</h1>
-              <p>
-                {post.description}
-              </p>
-              <p>
-                Phone Number : 
-              </p>
-            </article>
-          </Col>
-        </Row>
-        <Row>
-          <Col size="md-2">
-            <Link to="/">← Back to Search</Link>
-          </Col>
-        </Row>
+  <div class="row">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">{post.name}</span>
+          <p>{post.seller}'s item is located in {post.city}, {post.state}</p>
+        </div>
+        <div class="card-action">
+          <a href="/search">Back to results</a>
+          <a href="/">Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
       </Container>
     );
   }
