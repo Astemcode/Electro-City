@@ -9,6 +9,10 @@ export default {
   getPost: function(id) {
     return axios.get("/api/posts/" + id);
   },
+  // Gets posts by query
+  getPostByQuery: function(query) {
+    return axios.get("/api/posts/", query);
+  },
   // Deletes the book with the given id
   deletePost: function(id) {
     return axios.delete("/api/posts/" + id);
