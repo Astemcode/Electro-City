@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
@@ -96,6 +96,8 @@ function Posts() {
                 name="price"
                 placeholder="Name Your Price"
               />
+
+              
               
               <FormBtn
                 disabled={!(formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price  )}
