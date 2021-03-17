@@ -26,6 +26,12 @@ export class FilterForm extends React.Component {
             <label>Choose your filter</label>
           </div> */}
           <div className="input-field col s3">
+            <input id="city" type="text" className="validate" onChange={this.props.onChange} name="item"/>
+            <label className="active" htmlFor="city">
+              Item 
+            </label>
+          </div>
+          <div className="input-field col s3">
             <input id="city" type="text" className="validate" onChange={this.props.onChange} name="city"/>
             <label className="active" htmlFor="city">
               City
