@@ -1,17 +1,43 @@
 import React from "react";
+import Recaptcha from "react-recaptcha";
 import "./style.css";
 import "materialize-css/dist/css/materialize.min.css";
 import M from "materialize-css/dist/js/materialize.min.js";
 
 export class FilterForm extends React.Component {
   constructor(props){
-    super(props);
+    super(props)
+
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
+
+    this.state = {
+      isVerified: false
+  }}
+  recaptchaLoaded() {
+    console.log('capcha successfully loaded');
   }
 
   componentDidMount() {
     console.log(M);
     M.AutoInit();
+    if (this.state.isVerified) {
+      alert('You have successfully subscribed!');
+    } else {
+      alert('Please verify that you are a human!');
+    }
   }
+
+  verifyCallback(response) {
+    if (response) {
+      this.setState({
+        isVerified: true
+      })
+    }
+  }
+
+  
 
   render() {
     return (
@@ -56,6 +82,15 @@ export class FilterForm extends React.Component {
           value="Filter"
         />
         <button className="waves-effect waves-light btn-small" onClick={this.props.onClick}>Get All Posts</button>
+        
+        <Recaptcha
+            sitekey="6Le5aHQaAAAAAM4YFOcYK7kOVL8lORMfM80Ajvec"
+            render="explicit"
+            theme="dark"
+            onloadCallback={this.recaptchaLoaded}
+            verifyCallback={this.verifyCallback}
+          />
+
       </form>
     );
   }
