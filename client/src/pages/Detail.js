@@ -25,6 +25,10 @@ function Detail(props) {
         <div class="card-content white-text">
           <span class="card-title">{post.name}</span>
           <p>{post.seller}'s item is located in {post.city}, {post.state}</p>
+          <br />
+          <p> 
+            Phone Number : 
+          </p>
         </div>
         <div class="card-action">
           <a href="/search">Back to results</a>
