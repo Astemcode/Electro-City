@@ -19,7 +19,7 @@ function Detail(props) {
   }, [])
 
 
-class App extends Component {
+class Detail extends Component {
   constructor(props) {
     super(props)
 
