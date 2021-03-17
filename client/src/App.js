@@ -21,10 +21,10 @@ function App() {
       <div>
         <Nav />
         <Switch>
+          {/* <Route exact path="/">
+            <Home /> */
+          /* </Route> */}
           <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/search">
             <SearchResults />
           </Route>
           <Route exact path="/posts/:id">
