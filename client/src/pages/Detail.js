@@ -19,42 +19,42 @@ function Detail(props) {
   }, [])
 
 
-class Detail extends Component {
-  constructor(props) {
-    super(props)
+// class Detail extends Component {
+//   constructor(props) {
+//     super(props)
 
-    this.handleSubscribe = this.handleSubscribe.bind(this);
-    this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
+//     this.handleSubscribe = this.handleSubscribe.bind(this);
+//     this.recaptchaLoaded = this.recaptchaLoaded.bind(this);
+//     this.verifyCallback = this.verifyCallback.bind(this);
 
-    this.state = {
-      isVerified: false
-    }
-  }
+//     this.state = {
+//       isVerified: false
+//     }
+//   }
 
-  // A verification that informs us that recaptcha has loaded properly and this function is going to be called 
-  recaptchaLoaded() {
-    console.log('capcha successfully loaded');
-  }
+//   // A verification that informs us that recaptcha has loaded properly and this function is going to be called 
+//   recaptchaLoaded() {
+//     console.log('capcha successfully loaded');
+//   }
 
-  handleSubscribe() {
-    if (this.state.isVerified) {
-      alert('You have successfully subscribed!');
-    } else {
-      alert('Please verify that you are a human!');
-    }
-  }
+//   handleSubscribe() {
+//     if (this.state.isVerified) {
+//       alert('You have successfully subscribed!');
+//     } else {
+//       alert('Please verify that you are a human!');
+//     }
+//   }
 
-  // This callback function is called once the user successfully verifies themselves  
-  verifyCallback(response) {
-    if (response) {
-      this.setState({
-        isVerified: true
-      })
-    }
-  }}
+//   // This callback function is called once the user successfully verifies themselves  
+//   verifyCallback(response) {
+//     if (response) {
+//       this.setState({
+//         isVerified: true
+//       })
+//     }
+//   }}
 
-  render()
+  //render()
   return (
       <Container fluid>
   <div class="row">
@@ -68,13 +68,13 @@ class Detail extends Component {
             Phone Number : 
           </p>
 
-          <Recaptcha
+          {/* <Recaptcha
             sitekey="6Le5aHQaAAAAAM4YFOcYK7kOVL8lORMfM80Ajvec"
             render="explicit"
             theme="dark"
             onloadCallback={this.recaptchaLoaded}
             verifyCallback={this.verifyCallback}
-          />
+          /> */}
 
         </div>
         <div class="card-action">
