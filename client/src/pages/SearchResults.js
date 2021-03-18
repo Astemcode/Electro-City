@@ -131,15 +131,17 @@ function SearchResults() {
             {posts.map((post) => (
               <ListItem key={post._id}>
                 <Link to={"/posts/" + post._id}>
+                  <div>
                   <strong>
-                    {post.name} For sale by: {post.seller}
+                    "{post.name}" Price: ${post.price}
                   </strong>
+                  </div>
+                  <ul>
+                    <li>Location: {post.city}, {post.state}</li>
+                    <li>Contact: {post.seller}</li>
+                  </ul>
                 </Link>
-                <button type="button" onClick={() => getList()}>
-                  open modal
-                </button>
-                <Modal setOpen={setOpen} open={open} />
-                <DeleteBtn onClick={() => deletePost(posts._id)} />
+                <hr />
               </ListItem>
             ))}
           </List>
