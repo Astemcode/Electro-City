@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Recaptcha from "react-recaptcha";
 import { Link, useParams } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
-import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import Books from "./Books";
+
 
 function Detail(props) {
   const [post, setPost] = useState({})
@@ -56,12 +53,16 @@ function Detail(props) {
 
   //render()
   return (
-      <Container fluid>
-  <div class="row">
+     
+  <div class="row valign-center">
     <div class="col s12 m6">
-      <div class="card blue-grey darken-1">
+      <div class="card teal hoverable">
         <div class="card-content white-text">
+        {/* <div class="card-image">
+          <img src=""/> */}
           <span class="card-title">{post.name}</span>
+          {/* <a class="btn-floating halfway-fab waves-effect waves-light red"><p style={{ display:'flex', justifyContent:'center' }}>Add</p></a> */}
+        {/* </div> */}
           <p>{post.seller}'s item is located in {post.city}, {post.state}</p>
           <br />
           <p> 
@@ -84,7 +85,7 @@ function Detail(props) {
       </div>
     </div>
   </div>
-      </Container>
+    
     );
   }
 
