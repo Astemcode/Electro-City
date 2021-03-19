@@ -33,6 +33,7 @@ export default function SimpleModal(props) {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
+  console.log(props)
 
   // const handleOpen = () => {
   //   setOpen(true);
@@ -42,28 +43,30 @@ export default function SimpleModal(props) {
   //   setOpen(false);
   // };
 
-  const body = (
-    <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">Text in a modal</h2>
-      <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-      </p>
-      <SimpleModal />
-    </div>
-  );
+  // const body = (
+  //   <div style={modalStyle} className={classes.paper}>
+  //     <h2 id="simple-modal-title">{props.images.seller}</h2>
+  //     <p id="simple-modal-description">
+  //       Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+  //     </p>
+  //     <SimpleModal />
+  //   </div>
+  // );
 
   return (
     <div>
-      <button type="button" onClick={()=> {props.setOpen(false)}}>
-        Open Modal
-      </button>
       <Modal
         open={props.open}
         onClose={()=>{props.setOpen(false)}}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        {body}
+        <div style={modalStyle} className={classes.paper}>
+      <h2 id="simple-modal-title">{props.images.seller}</h2>
+      <p id="simple-modal-description">
+        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+      </p>
+    </div>
       </Modal>
     </div>
   );

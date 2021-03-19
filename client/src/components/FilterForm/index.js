@@ -31,9 +31,7 @@ export class FilterForm extends React.Component {
 
   verifyCallback(response) {
     if (response) {
-      this.setState({
-        isVerified: true
-      })
+      this.props.setVerified(true);
     }
   }
 
