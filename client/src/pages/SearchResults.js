@@ -11,6 +11,8 @@ import Modal from "../components/Modal";
 
 function SearchResults() {
   const [open, setOpen] = React.useState(false);
+  const [verified, setVerified] = React.useState(false);
+
   function getList() {
     API.getPosts().then((data) => {
       console.log(data);
@@ -125,8 +127,9 @@ function SearchResults() {
           onChange={handleInputChange}
           onSubmit={handleFormSubmit}
           onClick={handleButtonClick}
+          verified={verified} setVerified={setVerified}
         />
-        {posts.length ? (
+        {posts.length && verified ? (
           <List>
             {posts.map((post) => (
               <ListItem key={post._id}>
