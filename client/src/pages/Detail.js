@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { Col, Row, Container } from "../components/Grid";
 import API from "../utils/API";
 
 
@@ -54,13 +53,11 @@ function Detail(props) {
 
   //render()
   return (
-      <Container fluid>
-  <div class="row">
+     
+  <div class="row valign-center">
     <div class="col s12 m6">
       <div class="card teal hoverable">
         <div class="card-content white-text">
-          <br/>
-          <br/>
         {/* <div class="card-image">
           <img src=""/> */}
           <span class="card-title">{post.name}</span>
@@ -88,7 +85,7 @@ function Detail(props) {
       </div>
     </div>
   </div>
-      </Container>
+    
     );
   }
 
