@@ -4,12 +4,12 @@ import "firebase/storage"
 import "firebase/firestore"
 
 
-
+//process.env.REACT_APP_FIREBASEKEY
 
 // Your web app's Firebase configuration
 //var firebaseConfig = {
   export const app = firebase.initializeApp({
-    apiKey: process.env.REACT_APP_FIREBASEKEY,
+    apiKey: "AIzaSyCjItCS0Y6qdA5yy-hYm8vjkP_Zwg1xvPw",
     authDomain: "electro-city-71615.firebaseapp.com",
     projectId: "electro-city-71615",
     storageBucket: "electro-city-71615.appspot.com",

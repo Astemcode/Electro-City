@@ -17,6 +17,7 @@ function Posts() {
   const [file, setFile] = useState(null)
   const [error, setError] = useState(null)
   const [url, setURL] = useState(null)
+  const [imageURL, setimageURL] = useState(null)
 
   const types = ['image/png', 'image/jpeg']
 
@@ -62,10 +63,16 @@ function Posts() {
 
   // When the form is submitted, use the API.saveBook method to save the book data
   // Then reload posts from the database
-  function handleFormSubmit(event) {
+  const handleFormSubmit = async (event) => {
     event.preventDefault();
     if (formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price ) {
    
+      const storageRef = app.storage().ref()
+      const fileRef = storageRef.child(file.name)
+      await fileRef.put(file)
+      const fileURL = await fileRef.getDownloadURL()
+      console.log(fileURL)
+
       
       //acamind working code. This code will upload to the Electrocity project.
 /*       const fd = new FormData();
@@ -85,6 +92,7 @@ function Posts() {
          city: formObject.city,
          password: formObject.password,
          price: formObject.price,
+         imageURL:fileURL 
           
       })
         .then(res => loadPosts())

@@ -1,6 +1,6 @@
-rules_version = '2';
+
 service firebase.storage {
-  match /b/{bucket}/o {
+  match /b/electro-city-71615.appspot.com/o {
     match /{allPaths=**} {
       allow read, write; 
     }
