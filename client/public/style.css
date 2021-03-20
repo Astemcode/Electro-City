@@ -4,11 +4,13 @@
 }
 nav {
     padding: 10px
+    
 }
 
 nav .brand-logo{
     font-family: 'Ubuntu', sans-serif;
     color: #0CF574;
+    right: 660px;
 }
 
  .input-format{
