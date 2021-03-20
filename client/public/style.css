@@ -75,3 +75,12 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+html, body, .my-wrapper {
+    height: 100%;
+    width: 50vw;
+    margin: 0 auto;
+  }
+
+  .card-action {
+      background-color: #5079ac;
+  }

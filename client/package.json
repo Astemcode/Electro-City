@@ -4,18 +4,13 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-<<<<<<< Updated upstream
-    "@material-ui/core": "^4.11.3",
-    "axios": "^0.21.1",
-=======
-    "axios": "^0.21.1",
+    "axios": "^0.18.0",
     "firebase": "^8.3.0",
->>>>>>> Stashed changes
     "materialize-css": "^1.0.0-rc.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "3.4.3"
   },
   "scripts": {
     "start": "react-scripts start",

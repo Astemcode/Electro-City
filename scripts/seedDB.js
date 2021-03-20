@@ -19,7 +19,7 @@ const postSeed = [
     date: new Date(Date.now()),
     password: "",
     price: 75,
-    photo: ""
+    imageURL: ""
   },
   {
     name: "Table",
@@ -31,7 +31,7 @@ const postSeed = [
     date: new Date(Date.now()),
     password: "",
     price: 250,
-    photo: ""
+    imageURL: ""
   },
   {
     name: "Lamp",
@@ -43,7 +43,8 @@ const postSeed = [
     date: new Date(Date.now()),
     password: "",
     price: 15,
-    photo: ""
+    imageURL: ""
+
   }
 ];
 

@@ -4,6 +4,7 @@ import API from "../utils/API";
 import Modal from "../components/Modal";
 
 
+
 function Detail(props) {
   const [post, setPost] = useState({})
   const [open, setOpen] = useState(false);
@@ -56,47 +57,44 @@ function Detail(props) {
                         //render()
                         return (
                           
-                          <div class="row valign-center">
-    <div class="col s12 m6">
-      <div class="card teal hoverable">
-        <div class="card-content white-text">
-        {/* <div class="card-image">
-          <img src=""/> */}
+<div class="row">
+    <div class="col s12 m7">
+      <div class="card hoverable grey lighten-1">
+        <div class="card-image">
+          <img src={post.imageURL}/>
           <span class="card-title">{post.name}</span>
-          {/* <a class="btn-floating halfway-fab waves-effect waves-light red"><p style={{ display:'flex', justifyContent:'center' }}>Add</p></a> */}
-        {/* </div> */}
-          <p>{post.seller}'s item is located in {post.city}, {post.state}</p>
-          <br />
-          <p> 
-            Phone Number : 
-          </p>
-
-          {/* <Recaptcha
-            sitekey="6Le5aHQaAAAAAM4YFOcYK7kOVL8lORMfM80Ajvec"
-            render="explicit"
-            theme="dark"
-            onloadCallback={this.recaptchaLoaded}
-            verifyCallback={this.verifyCallback}
-          /> */}
-
+        </div>
+        <div class="card-content">
+          <p>{post.description}</p>
         </div>
         <div class="card-action">
-          <a href="/search">Back to results</a>
-          <a href="/">Home</a>
-          {post ? (
-            <>
-            <a onClick={()=> setOpen(true)}>See More </a>
-            <Modal setOpen={setOpen} open={open} images={post}/>    
-            </>  
-          )
-        : null}
-        </div>
+    <a href="/search">Back to results</a>
+    <a href="/">Home</a>
+    {post ? (
+      <>
+      <a onClick={()=> setOpen(true)}>Contact </a>
+      <Modal setOpen={setOpen} open={open} post={post}/>    
+      </>  
+    )
+  : null}
+  </div>
       </div>
     </div>
   </div>
     
     );
   }
-
-
+  
+  
+  {/* <div class="card-action">
+    <a href="/search">Back to results</a>
+    <a href="/">Home</a>
+    {post ? (
+      <>
+      <a onClick={()=> setOpen(true)}>See More </a>
+      <Modal setOpen={setOpen} open={open} images={post}/>    
+      </>  
+    )
+  : null}
+  </div> */}
 export default Detail;

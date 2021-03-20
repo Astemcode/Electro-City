@@ -32,7 +32,6 @@ export default function SimpleModal(props) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
-  const [open, setOpen] = React.useState(false);
   console.log(props)
 
   // const handleOpen = () => {
@@ -62,9 +61,9 @@ export default function SimpleModal(props) {
         aria-describedby="simple-modal-description"
       >
         <div style={modalStyle} className={classes.paper}>
-      <h2 id="simple-modal-title">{props.images.seller}</h2>
+      <h2 id="simple-modal-title">{props.post.seller}</h2>
       <p id="simple-modal-description">
-        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+        
       </p>
     </div>
       </Modal>
