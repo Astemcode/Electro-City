@@ -16,14 +16,20 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^4.1.2",
+    "concurrently": "^6.0.0",
     "nodemon": "^1.18.7"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "express": "^4.16.3",
+<<<<<<< HEAD
     "firebase": "^8.3.0",
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16"
+=======
+    "if-env": "^1.0.4",
+    "mongoose": "^5.3.16",
+    "react-recaptcha": "^2.3.10"
+>>>>>>> 69a97aa1a7dfb4b0cc5197a60ce1a09b1979ae63
   }
 }

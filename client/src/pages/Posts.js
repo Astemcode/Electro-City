@@ -86,7 +86,7 @@ function Posts() {
       API.savePost({
 
         //Put the criteria to save here (create posts)
-        name: formObject.name,
+         name: formObject.name,
          seller: formObject.seller,
          state: formObject.state,
          city: formObject.city,
@@ -95,7 +95,10 @@ function Posts() {
          imageURL:fileURL 
           
       })
-        .then(res => loadPosts())
+        .then(res => {
+          setFormObject({});
+          window.location.assign('/');
+        })
         .catch(err => console.log(err));
     }
   };
@@ -153,6 +156,8 @@ function Posts() {
               >
                 Submit Post
               </FormBtn>
+
+              
             </form>
           </Row>
       </Container>

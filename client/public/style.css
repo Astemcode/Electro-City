@@ -66,3 +66,12 @@ h4{
 .spring-green-tx{
     color: #0CF574;
 }
+
+body {
+    /* background-image: linear-gradient(to bottom right, rgb(135, 123, 238), rgb(224, 224, 89)); */
+    /* background-image: url("./images/map2.png"); */
+    background-position: center;
+    background-blend-mode: saturation;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
