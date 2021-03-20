@@ -81,3 +81,6 @@ html, body, .my-wrapper {
     margin: 0 auto;
   }
 
+  .card-action {
+      background-color: #5079ac;
+  }

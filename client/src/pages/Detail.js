@@ -59,18 +59,25 @@ function Detail(props) {
                           
 <div class="row">
     <div class="col s12 m7">
-      <div class="card hoverable red darken-2">
+      <div class="card hoverable grey lighten-1">
         <div class="card-image">
-          <img src="images/sample-1.jpg"/>
-          <span class="card-title">Card Title</span>
+          <img src={post.imageURL}/>
+          <span class="card-title">{post.name}</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p>{post.description}</p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
-        </div>
+    <a href="/search">Back to results</a>
+    <a href="/">Home</a>
+    {post ? (
+      <>
+      <a onClick={()=> setOpen(true)}>Contact </a>
+      <Modal setOpen={setOpen} open={open} post={post}/>    
+      </>  
+    )
+  : null}
+  </div>
       </div>
     </div>
   </div>
