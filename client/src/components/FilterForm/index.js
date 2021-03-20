@@ -40,7 +40,7 @@ export class FilterForm extends React.Component {
   render() {
     return (
       <form className="filter-form" onSubmit={this.props.onSubmit}>
-        <div className="row">
+        <div className="filterForm">
           {/* <div className="input-field col s3">
               <select multiple={true} value={""} name="filter" onChange={this.props.onChange}>
                 <option value="City">City</option>

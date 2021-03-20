@@ -7,3 +7,7 @@
 .row{
     margin-top: 5rem;
 }
+
+label {
+  color: #fee293;
+}

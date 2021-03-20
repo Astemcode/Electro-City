@@ -95,6 +95,8 @@ body {
 form {
     background-color: rgb(44 106 132 / 60%);
     background-blend-mode: overlay;
+    padding-left: 20px;
+    padding-top: 10px;
 }
 
 .postTitle {
