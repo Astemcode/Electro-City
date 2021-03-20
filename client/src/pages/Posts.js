@@ -65,7 +65,7 @@ function Posts() {
   // Then reload posts from the database
   const handleFormSubmit = async (event) => {
     event.preventDefault();
-    if (formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price ) {
+    if (formObject.name && formObject.description && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price ) {
    
       const storageRef = app.storage().ref()
       const fileRef = storageRef.child(file.name)
@@ -87,6 +87,7 @@ function Posts() {
 
         //Put the criteria to save here (create posts)
          name: formObject.name,
+         description: formObject.description,
          seller: formObject.seller,
          state: formObject.state,
          city: formObject.city,
@@ -114,6 +115,11 @@ function Posts() {
                 onChange={handleInputChange}
                 name="name"
                 placeholder="What would you like to sell? (required)"
+              />
+              <Input
+                onChange={handleInputChange}
+                name="description"
+                placeholder="Describe your item (required)"
               />
               <Input
                 onChange={handleInputChange}
@@ -151,7 +157,7 @@ function Posts() {
               
               
               <FormBtn
-                disabled={!(formObject.name && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price  )}
+                disabled={!(formObject.name && formObject.description && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price  )}
                 onClick={handleFormSubmit}
               >
                 Submit Post
