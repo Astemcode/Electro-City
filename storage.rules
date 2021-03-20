@@ -1,0 +1,8 @@
+
+service firebase.storage {
+  match /b/electro-city-71615.appspot.com/o {
+    match /{allPaths=**} {
+      allow read, write; 
+    }
+  }
+}

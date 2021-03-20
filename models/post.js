@@ -10,6 +10,7 @@ const postSchema = new Schema({
   date: { type: Date, default: Date.now },
   password: {type: String, required: true},
   price: {type: Number, required: true},
+  imageURL:{type: String}
   
 });
 
