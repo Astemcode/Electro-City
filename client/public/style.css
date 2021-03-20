@@ -1,3 +1,7 @@
+.bg {
+    background-image: url(./images/map.png);
+    position: relative;
+}
 nav {
     padding: 10px
 }
@@ -75,11 +79,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-html, body, .my-wrapper {
+/* html, body, .my-wrapper {
     height: 100%;
     width: 50vw;
     margin: 0 auto;
-  }
+  } */
 
   .card-action {
       background-color: #5079ac;
