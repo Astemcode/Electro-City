@@ -108,7 +108,7 @@ function Posts() {
       <Container fluid>
         <Row>
           <Jumbotron>
-              <h1>What would you like to sell?</h1>
+              <h1 className="postTitle">What would you like to sell?</h1>
             </Jumbotron>
             <form className="input-format">
               <Input
@@ -146,24 +146,24 @@ function Posts() {
                 name="price"
                 placeholder="Name Your Price"
               />
+              <br/>
+              <div>
               <input 
               type="file"
+              className="filePhoto"
               name="PhotoURL"
               onChange={handlePhotoChange}
               />
               <div className="output">
               {error && <div className="error">{ error }</div>}
               </div>
-              
-              
+              <br/>
               <FormBtn
                 disabled={!(formObject.name && formObject.description && formObject.seller && formObject.state  && formObject.city && formObject.password && formObject.price  )}
-                onClick={handleFormSubmit}
-              >
+                onClick={handleFormSubmit}>
                 Submit Post
               </FormBtn>
-
-              
+              </div>
             </form>
           </Row>
       </Container>

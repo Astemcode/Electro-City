@@ -2,6 +2,7 @@
     background-image: url(./images/map.png);
     position: relative;
 }
+
 nav {
     padding: 10px
     
@@ -90,3 +91,17 @@ body {
   .card-action {
       background-color: #5079ac;
   }
+
+form {
+    background-color: rgb(44 106 132 / 60%);
+    background-blend-mode: overlay;
+}
+
+.postTitle {
+    color: rgb(38 126 161)
+}
+
+.filePhoto {
+    position: relative;
+}
+
