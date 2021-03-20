@@ -82,7 +82,7 @@ export class FilterForm extends React.Component {
         <button className="waves-effect waves-light btn-small" onClick={this.props.onClick}>Get All Posts</button>
         
         <Recaptcha
-            sitekey= { process.env.REACT_APP_RECAPTCHAKEY }
+            sitekey= "6Le5aHQaAAAAAM4YFOcYK7kOVL8lORMfM80Ajvec"
             render="explicit"
             theme="dark"
             onloadCallback={this.recaptchaLoaded}
