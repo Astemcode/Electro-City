@@ -8,6 +8,9 @@ nav {
     padding: 10px
     
 }
+.CenterAlign{
+    margin:0 auto
+}
 
 nav .brand-logo{
     font-family: 'Ubuntu', sans-serif;
