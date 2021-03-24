@@ -57,9 +57,9 @@ function Detail(props) {
                         //render()
                         return (
                           
-<div class="row">
-    <div class="col s12 m7">
-      <div class="card hoverable transparent lighten-1">
+<div class="row valign-wrapper">
+    <div class="col s12 m7 CenterAlign" >
+      <div class="card hoverable grey lighten-1">
         <div class="card-image">
           <img src={post.imageURL}/>
           <span class="card-title">{post.name}</span>
