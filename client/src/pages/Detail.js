@@ -65,14 +65,14 @@ function Detail(props) {
           <span class="card-title">{post.name}</span>
         </div>
         <div class="card-content">
-          <p>{post.description}</p>
+          <h4 className="flow-text ">{post.description}</h4>
         </div>
         <div class="card-action">
-    <a href="/search">Back to results</a>
-    <a href="/">Home</a>
+    <a href="/search" className="blue-text darken-3">Back to results</a>
+    <a href="/" className="blue-text darken-3">Home</a>
     {post ? (
       <>
-      <a onClick={()=> setOpen(true)}>Contact </a>
+      <a onClick={()=> setOpen(true)} className="blue-text darken-3">Contact </a>
       <Modal setOpen={setOpen} open={open} post={post}/>    
       </>  
     )

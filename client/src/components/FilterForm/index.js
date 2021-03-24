@@ -51,25 +51,25 @@ export class FilterForm extends React.Component {
           </div> */}
           <div className="input-field col s3">
             <input id="city" type="text" className="validate" onChange={this.props.onChange} name="item"/>
-            <label className="active" htmlFor="city">
-              Item 
+            <label className="active yellow-text accent-4" htmlFor="city">
+              Item
             </label>
           </div>
           <div className="input-field col s3">
             <input id="city" type="text" className="validate" onChange={this.props.onChange} name="city"/>
-            <label className="active" htmlFor="city">
+            <label className="active yellow-text accent-4" htmlFor="city">
               City
             </label>
           </div>
           <div className="input-field col s3">
             <input id="state" type="text" className="validate" onChange={this.props.onChange} name="state"/>
-            <label className="active" htmlFor="state">
+            <label className="active yellow-text accent-4" htmlFor="state">
               State
             </label>
           </div>
           <div className="input-field col s3">
             <input id="first_name2" type="number" className="validate" onChange={this.props.onChange} name="price"/>
-            <label className="active" htmlFor="price">
+            <label className="active yellow-text accent-4" htmlFor="price">
               Price
             </label>
           </div>
@@ -82,7 +82,7 @@ export class FilterForm extends React.Component {
         <button className="waves-effect waves-light btn-small" onClick={this.props.onClick}>Get All Posts</button>
         
         <Recaptcha
-            sitekey= "6Le5aHQaAAAAAM4YFOcYK7kOVL8lORMfM80Ajvec"
+            sitekey= { process.env.REACT_APP_RECAPTCHAKEY }
             render="explicit"
             theme="dark"
             onloadCallback={this.recaptchaLoaded}

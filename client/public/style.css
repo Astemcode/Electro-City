@@ -111,3 +111,6 @@ form {
     position: relative;
 }
 
+.transparentBG {
+    background-color: rgba(0,0,0,0);
+  }
