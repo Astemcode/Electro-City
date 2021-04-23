@@ -26,14 +26,14 @@
 
 
 ## Contributors
-- Please find the contributors of this project below
-Rich Wilks, James Gigantes, Luis Rujana, Joivre Charles, Jakub Marchel
+- Please find the contributors of this project below:
+    - Rich Wilks
+    - James Gigantes 
+    - Luis Rujana 
+    - Joivre Charles 
+    - Jakub Marchel
 
 
 ## Badges
 ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
-
-## Questions
-* Please direct Questions to the following:
-    - https://github.com/aStemCode
 
